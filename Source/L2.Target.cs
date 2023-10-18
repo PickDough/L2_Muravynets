@@ -1,7 +1,6 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 using UnrealBuildTool;
-using System.Collections.Generic;
 
 public class L2Target : TargetRules
 {
@@ -11,14 +10,12 @@ public class L2Target : TargetRules
 		DefaultBuildSettings = BuildSettingsVersion.V2;
 		IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_1;
 		ExtraModuleNames.Add("L2");
-		
+
 		if (bBuildEditor)
-		{
-			ExtraModuleNames.AddRange( 
-				new string[]
+			ExtraModuleNames.AddRange(
+				new[]
 				{
 					"FunctionBasedVisualizerEditor"
 				});
-		}
 	}
 }

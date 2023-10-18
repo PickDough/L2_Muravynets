@@ -10,11 +10,17 @@ class L2_API UCosineMovement : public UFunctionBasedMovement
 	GENERATED_BODY()
 
 public:
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Function", meta = (AllowPrivateAccess = "true"),
+	UPROPERTY(EditAnywhere,
+		BlueprintReadOnly,
+		Category = "Function",
+		meta = (AllowPrivateAccess = "true"),
 		DisplayName="b*sin(A*t) // A")
 	float A = 10.0;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Function", meta = (AllowPrivateAccess = "true"),
+	UPROPERTY(EditAnywhere,
+		BlueprintReadOnly,
+		Category = "Function",
+		meta = (AllowPrivateAccess = "true"),
 		DisplayName="B*sin(a*t) // B")
 	float B = 100.0;
 

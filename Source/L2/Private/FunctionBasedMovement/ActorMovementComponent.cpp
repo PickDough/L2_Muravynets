@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "ActorMovementComponent.h"
+#include "FunctionBasedMovement/ActorMovementComponent.h"
 
 // Sets default values for this component's properties
 UActorMovementComponent::UActorMovementComponent()
@@ -20,18 +20,22 @@ void UActorMovementComponent::BeginPlay()
 	Super::BeginPlay();
 
 	// ...
-	
 }
 
 
 // Called every frame
-void UActorMovementComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
+void UActorMovementComponent::TickComponent(float DeltaTime,
+                                            ELevelTick TickType,
+                                            FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
 	if (FunctionBasedMovement->HasTimeRunOut())
+	{
 		GetOwner()->Destroy();
+	}
 	else
+	{
 		GetOwner()->SetActorLocation(FunctionBasedMovement->PositionBasedOnFunction(GetOwner(), DeltaTime));
+	}
 }
-
