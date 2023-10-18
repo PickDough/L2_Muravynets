@@ -6,7 +6,7 @@
 #include "UnrealEdGlobals.h"
 #include "Components/SphereComponent.h"
 #include "Editor/UnrealEdEngine.h"
-#include "L2/Public/ActorMovementComponent.h"
+#include "L2/Public/FunctionBasedMovement/ActorMovementComponent.h"
 
 IMPLEMENT_GAME_MODULE(FFunctionBasedVisualizerEditorModule, FunctionBasedVisualizerEditor);
 

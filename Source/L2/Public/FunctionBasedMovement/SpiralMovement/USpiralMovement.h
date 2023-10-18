@@ -8,7 +8,10 @@ class USpiralMovement : public UFunctionBasedMovement
 	GENERATED_BODY()
 
 public:
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Function", meta = (AllowPrivateAccess = "true"),
+	UPROPERTY(EditAnywhere,
+		BlueprintReadOnly,
+		Category = "Function",
+		meta = (AllowPrivateAccess = "true"),
 		DisplayName="A*sin(t) + A*cost(t) // A")
 	float A = 100;
 

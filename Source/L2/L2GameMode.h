@@ -14,6 +14,3 @@ class AL2GameMode : public AGameModeBase
 public:
 	AL2GameMode();
 };
-
-
-

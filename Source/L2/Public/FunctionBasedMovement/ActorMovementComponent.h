@@ -8,13 +8,12 @@
 #include "ActorMovementComponent.generated.h"
 
 
-
-UCLASS( ClassGroup=("Actor Movement"), meta=(BlueprintSpawnableComponent) )
+UCLASS(ClassGroup=("Actor Movement"), meta=(BlueprintSpawnableComponent))
 class L2_API UActorMovementComponent : public UActorComponent
 {
 	GENERATED_BODY()
 
-public:	
+public:
 	// Sets default values for this component's properties
 	UActorMovementComponent();
 
@@ -22,9 +21,11 @@ protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
-public:	
+public:
 	// Called every frame
-	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+	virtual void TickComponent(float DeltaTime,
+	                           ELevelTick TickType,
+	                           FActorComponentTickFunction* ThisTickFunction) override;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess = "true"))
 	UFunctionBasedMovement* FunctionBasedMovement;

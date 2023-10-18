@@ -5,7 +5,7 @@
 
 DECLARE_LOG_CATEGORY_EXTERN(FunctionBasedVisualizerEditor, All, All)
 
-class FFunctionBasedVisualizerEditorModule: public IModuleInterface
+class FFunctionBasedVisualizerEditorModule : public IModuleInterface
 {
 public:
 	virtual void StartupModule() override;

@@ -1,8 +1,10 @@
 ﻿#include "FFunctionBasedVisualizer.h"
 
-#include "L2\Public\ActorMovementComponent.h"
+#include "L2/Public/FunctionBasedMovement/ActorMovementComponent.h"
 
-void FFunctionBasedVisualizer::DrawVisualization(const UActorComponent* Component, const FSceneView* View, FPrimitiveDrawInterface* PDI)
+void FFunctionBasedVisualizer::DrawVisualization(const UActorComponent* Component,
+                                                 const FSceneView* View,
+                                                 FPrimitiveDrawInterface* PDI)
 {
 	if (const UActorMovementComponent* MovementComponent = Cast<UActorMovementComponent>(Component))
 	{
@@ -21,8 +23,10 @@ void FFunctionBasedVisualizer::DrawVisualization(const UActorComponent* Componen
 	}
 }
 
-void FFunctionBasedVisualizer::DrawVisualizationHUD(const UActorComponent* Component, const FViewport* Viewport,
-	const FSceneView* View, FCanvas* Canvas)
+void FFunctionBasedVisualizer::DrawVisualizationHUD(const UActorComponent* Component,
+                                                    const FViewport* Viewport,
+                                                    const FSceneView* View,
+                                                    FCanvas* Canvas)
 {
 	FComponentVisualizer::DrawVisualizationHUD(Component, Viewport, View, Canvas);
 }
